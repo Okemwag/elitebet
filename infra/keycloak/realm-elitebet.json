@@ -11,7 +11,9 @@
       { "name": "BETTOR", "description": "Regular bettor role" },
       { "name": "OPERATOR", "description": "Trading and operations role" },
       { "name": "COMPLIANCE_OFFICER", "description": "Compliance review role" },
-      { "name": "ADMIN", "description": "Administrative role" }
+      { "name": "ADMIN", "description": "Administrative role" },
+      { "name": "SUPPORT", "description": "Customer support account assistance role" },
+      { "name": "RISK_ANALYST", "description": "Risk and fraud investigation role" }
     ]
   },
   "clients": [

@@ -1,6 +1,17 @@
 package com.okemwag.elitebet.authentication.mapper;
 
-public final class AuthenticationMapper {
-	private AuthenticationMapper() {
+import java.util.Set;
+
+import org.springframework.stereotype.Component;
+
+import com.okemwag.elitebet.authentication.application.dto.AuthAccountView;
+import com.okemwag.elitebet.authentication.domain.model.AuthAccount;
+
+@Component
+public class AuthenticationMapper {
+
+	public AuthAccountView toView(AuthAccount account, Set<String> roles) {
+		return new AuthAccountView(account.principalId(), account.username(), account.email(), account.emailVerified(),
+				account.status(), account.mfaStatus(), Set.copyOf(roles), account.lockedUntil(), account.lastLoginAt());
 	}
 }

@@ -13,6 +13,7 @@ CREATE TABLE elitebet.idempotency_records (
     created_at timestamptz NOT NULL DEFAULT now(),
     updated_at timestamptz NOT NULL DEFAULT now(),
     version bigint NOT NULL DEFAULT 0,
+    CONSTRAINT ck_idempotency_operation_type CHECK (operation_type IN ('USER_REGISTRATION', 'BET_PLACEMENT', 'DEPOSIT_CALLBACK', 'WITHDRAWAL_CALLBACK', 'SETTLEMENT_REPLAY', 'WALLET_ADJUSTMENT')),
     CONSTRAINT ck_idempotency_status CHECK (status IN ('IN_PROGRESS', 'COMPLETED', 'FAILED')),
     CONSTRAINT ck_idempotency_response_status CHECK (response_status IS NULL OR response_status BETWEEN 100 AND 599),
     CONSTRAINT uq_idempotency_operation_key_actor UNIQUE (operation_type, idempotency_key, actor_id)

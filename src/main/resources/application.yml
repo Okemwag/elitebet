@@ -39,3 +39,10 @@ server:
 logging:
   pattern:
     level: "%5p [correlationId:%X{correlationId:-} userId:%X{userId:-}]"
+
+elitebet:
+  keycloak:
+    base-url: ${KEYCLOAK_BASE_URL:http://localhost:9090}
+    realm: ${KEYCLOAK_REALM:elitebet}
+    admin-client-id: ${KEYCLOAK_ADMIN_CLIENT_ID:elitebet-api}
+    admin-client-secret: ${KEYCLOAK_ADMIN_CLIENT_SECRET:change-me}

@@ -1,6 +1,7 @@
 package com.okemwag.elitebet.shared.idempotency;
 
 public enum IdempotentOperationType {
+	USER_REGISTRATION,
 	BET_PLACEMENT,
 	DEPOSIT_CALLBACK,
 	WITHDRAWAL_CALLBACK,
