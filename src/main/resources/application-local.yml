@@ -1,12 +1,12 @@
 spring:
   datasource:
-    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/elitebet}
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5433/elitebet}
     username: ${SPRING_DATASOURCE_USERNAME:elitebet}
     password: ${SPRING_DATASOURCE_PASSWORD:elitebet_dev_password}
   data:
     redis:
       host: ${SPRING_DATA_REDIS_HOST:localhost}
-      port: ${SPRING_DATA_REDIS_PORT:6379}
+      port: ${SPRING_DATA_REDIS_PORT:6380}
       password: ${SPRING_DATA_REDIS_PASSWORD:redis_dev_password}
   security:
     oauth2:
@@ -18,4 +18,3 @@ management:
   otlp:
     tracing:
       endpoint: ${MANAGEMENT_OTLP_TRACING_ENDPOINT:http://localhost:4318/v1/traces}
-
