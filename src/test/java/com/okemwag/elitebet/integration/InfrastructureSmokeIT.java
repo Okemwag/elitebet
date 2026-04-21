@@ -56,9 +56,14 @@ class InfrastructureSmokeIT {
 			@Autowired RedisConnectionFactory redisConnectionFactory) throws Exception {
 		try (var connection = dataSource.getConnection();
 				var statement = connection.createStatement();
-				var resultSet = statement.executeQuery("select current_schema()")) {
+				var resultSet = statement.executeQuery("""
+						select exists(select 1 from information_schema.schemata where schema_name = 'elitebet'),
+						       exists(select 1 from information_schema.tables
+						              where table_schema = 'elitebet' and table_name = 'flyway_schema_history')
+						""")) {
 			assertThat(resultSet.next()).isTrue();
-			assertThat(resultSet.getString(1)).isEqualTo("elitebet");
+			assertThat(resultSet.getBoolean(1)).isTrue();
+			assertThat(resultSet.getBoolean(2)).isTrue();
 		}
 
 		try (var redisConnection = redisConnectionFactory.getConnection()) {

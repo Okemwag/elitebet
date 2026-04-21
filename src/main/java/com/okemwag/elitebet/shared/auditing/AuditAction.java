@@ -6,5 +6,9 @@ public enum AuditAction {
 	DELETE,
 	APPROVE,
 	REJECT,
-	ADJUST
+	ADJUST,
+	LOGIN,
+	LOGOUT,
+	LOCK,
+	UNLOCK
 }

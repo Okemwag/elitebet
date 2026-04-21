@@ -2,8 +2,12 @@ spring:
   docker:
     compose:
       enabled: false
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost/.well-known/jwks.json
 
 management:
   tracing:
     enabled: false
-

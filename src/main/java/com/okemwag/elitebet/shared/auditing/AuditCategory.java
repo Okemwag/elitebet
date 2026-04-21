@@ -5,5 +5,6 @@ public enum AuditCategory {
 	COMPLIANCE,
 	MONEY,
 	BETTING,
-	ADMIN
+	ADMIN,
+	SYSTEM
 }
