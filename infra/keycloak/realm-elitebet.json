@@ -1,0 +1,46 @@
+{
+  "realm": "elitebet",
+  "enabled": true,
+  "displayName": "EliteBet",
+  "registrationAllowed": false,
+  "loginWithEmailAllowed": true,
+  "duplicateEmailsAllowed": false,
+  "resetPasswordAllowed": true,
+  "roles": {
+    "realm": [
+      { "name": "BETTOR", "description": "Regular bettor role" },
+      { "name": "OPERATOR", "description": "Trading and operations role" },
+      { "name": "COMPLIANCE_OFFICER", "description": "Compliance review role" },
+      { "name": "ADMIN", "description": "Administrative role" }
+    ]
+  },
+  "clients": [
+    {
+      "clientId": "elitebet-api",
+      "name": "EliteBet API",
+      "enabled": true,
+      "protocol": "openid-connect",
+      "publicClient": false,
+      "serviceAccountsEnabled": true,
+      "standardFlowEnabled": false,
+      "directAccessGrantsEnabled": false
+    },
+    {
+      "clientId": "elitebet-web",
+      "name": "EliteBet Web",
+      "enabled": true,
+      "protocol": "openid-connect",
+      "publicClient": true,
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": false,
+      "redirectUris": [
+        "http://localhost:3000/*",
+        "http://localhost:8080/*"
+      ],
+      "webOrigins": [
+        "http://localhost:3000",
+        "http://localhost:8080"
+      ]
+    }
+  ]
+}

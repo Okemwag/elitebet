@@ -1,0 +1,9 @@
+spring:
+  docker:
+    compose:
+      enabled: false
+
+management:
+  tracing:
+    enabled: false
+

@@ -1,0 +1,12 @@
+.git
+.metals
+.idea
+.vscode
+target
+build
+dist
+*.log
+*.tmp
+docker/**/data
+README.md
+image.png

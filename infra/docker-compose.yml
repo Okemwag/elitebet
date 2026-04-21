@@ -1,0 +1,4 @@
+# Canonical local infrastructure stack.
+# The root compose.yaml has the same service definitions so `docker compose up` works from the repository root.
+include:
+  - ../compose.yaml

@@ -1,4 +1,4 @@
-FROM postgres:18.1
-COPY init-postgres.sh /docker-entrypoint-initdb.d/
-RUN chmod +x /docker-entrypoint-initdb.d/*
-USER root
+ARG POSTGRES_IMAGE=postgres:18.3-alpine
+FROM ${POSTGRES_IMAGE}
+
+COPY docker/postgres/init/ /docker-entrypoint-initdb.d/
