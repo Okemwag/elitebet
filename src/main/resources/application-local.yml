@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5433/elitebet}
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5433/elitebet?currentSchema=elitebet}
     username: ${SPRING_DATASOURCE_USERNAME:elitebet}
     password: ${SPRING_DATASOURCE_PASSWORD:elitebet_dev_password}
   data:

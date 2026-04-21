@@ -198,7 +198,7 @@ services:
     profiles: ["app"]
     environment:
       SPRING_PROFILES_ACTIVE: ${SPRING_PROFILES_ACTIVE:-local}
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/${POSTGRES_DB:-elitebet}
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/${POSTGRES_DB:-elitebet}?currentSchema=elitebet
       SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER:-elitebet}
       SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD:-elitebet_dev_password}
       SPRING_DATA_REDIS_HOST: redis

@@ -4,6 +4,18 @@ spring:
   docker:
     compose:
       enabled: false
+  flyway:
+    enabled: true
+    create-schemas: true
+    schemas: elitebet
+    default-schema: elitebet
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        default_schema: elitebet
 
 management:
   endpoints:
@@ -24,3 +36,6 @@ management:
 server:
   shutdown: graceful
 
+logging:
+  pattern:
+    level: "%5p [correlationId:%X{correlationId:-} userId:%X{userId:-}]"
