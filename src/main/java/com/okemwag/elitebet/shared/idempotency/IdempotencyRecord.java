@@ -102,6 +102,13 @@ public class IdempotencyRecord {
 		this.updatedAt = now;
 	}
 
+	public void restart(Instant lockedUntil, Instant now) {
+		this.lockedUntil = lockedUntil;
+		this.status = IdempotencyStatus.IN_PROGRESS;
+		this.failureReason = null;
+		this.updatedAt = now;
+	}
+
 	public UUID id() {
 		return id;
 	}
@@ -120,6 +127,10 @@ public class IdempotencyRecord {
 
 	public String requestHash() {
 		return requestHash;
+	}
+
+	public Instant lockedUntil() {
+		return lockedUntil;
 	}
 
 	public IdempotencyStatus status() {

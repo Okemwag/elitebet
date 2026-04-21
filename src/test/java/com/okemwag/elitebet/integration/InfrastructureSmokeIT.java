@@ -59,11 +59,21 @@ class InfrastructureSmokeIT {
 				var resultSet = statement.executeQuery("""
 						select exists(select 1 from information_schema.schemata where schema_name = 'elitebet'),
 						       exists(select 1 from information_schema.tables
-						              where table_schema = 'elitebet' and table_name = 'flyway_schema_history')
+						              where table_schema = 'elitebet' and table_name = 'flyway_schema_history'),
+						       exists(select 1 from information_schema.triggers
+						              where event_object_schema = 'elitebet'
+						                and event_object_table = 'audit_events'
+						                and trigger_name = 'trg_audit_events_append_only_update'),
+						       exists(select 1 from information_schema.triggers
+						              where event_object_schema = 'elitebet'
+						                and event_object_table = 'audit_events'
+						                and trigger_name = 'trg_audit_events_append_only_delete')
 						""")) {
 			assertThat(resultSet.next()).isTrue();
 			assertThat(resultSet.getBoolean(1)).isTrue();
 			assertThat(resultSet.getBoolean(2)).isTrue();
+			assertThat(resultSet.getBoolean(3)).isTrue();
+			assertThat(resultSet.getBoolean(4)).isTrue();
 		}
 
 		try (var redisConnection = redisConnectionFactory.getConnection()) {

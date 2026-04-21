@@ -77,3 +77,22 @@ CREATE INDEX idx_audit_events_entity_occurred_at
 CREATE INDEX idx_audit_events_correlation_id
     ON elitebet.audit_events (correlation_id)
     WHERE correlation_id IS NOT NULL;
+
+CREATE OR REPLACE FUNCTION elitebet.prevent_audit_event_mutation()
+RETURNS trigger
+LANGUAGE plpgsql
+AS $$
+BEGIN
+    RAISE EXCEPTION 'audit_events is append-only';
+END;
+$$;
+
+CREATE TRIGGER trg_audit_events_append_only_update
+    BEFORE UPDATE ON elitebet.audit_events
+    FOR EACH ROW
+    EXECUTE FUNCTION elitebet.prevent_audit_event_mutation();
+
+CREATE TRIGGER trg_audit_events_append_only_delete
+    BEFORE DELETE ON elitebet.audit_events
+    FOR EACH ROW
+    EXECUTE FUNCTION elitebet.prevent_audit_event_mutation();

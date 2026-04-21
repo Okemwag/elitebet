@@ -4,6 +4,13 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+### Local environment ###
+.env
+.env.*
+!.env.example
+!*.env.example
+*.local
+
 ### STS ###
 .apt_generated
 .classpath
@@ -19,6 +26,12 @@ target/
 *.iml
 *.ipr
 
+### Metals / Bloop / BSP ###
+.metals/
+.bloop/
+.bsp/
+metals.sbt
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
@@ -31,4 +44,3 @@ build/
 
 ### VS Code ###
 .vscode/
-.env

@@ -118,6 +118,10 @@ public class OutboxEvent {
 		return status;
 	}
 
+	public int retryCount() {
+		return retryCount;
+	}
+
 	public String payload() {
 		return payload;
 	}

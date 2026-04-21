@@ -966,3 +966,47 @@ WARNING: Unmatched cancel notification for request id 728
 2026.04.22 01:42:15 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
 2026.04.22 01:42:15 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/exception/ForbiddenOperationException.java. Using fallback presentation compiler.
 2026.04.22 01:42:16 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/exception/ForbiddenOperationException.java. Using fallback presentation compiler.
+2026.04.22 01:45:14 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/auditing/AuditAction.java. Using fallback presentation compiler.
+2026.04.22 01:45:14 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/auditing/AuditCategory.java. Using fallback presentation compiler.
+2026.04.22 01:45:14 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/auditing/AuditContext.java. Using fallback presentation compiler.
+2026.04.22 01:45:14 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/auditing/AuditEventPublisher.java. Using fallback presentation compiler.
+2026.04.22 01:45:14 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/auditing/AuditMetadata.java. Using fallback presentation compiler.
+2026.04.22 01:45:14 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/config/ClockConfig.java. Using fallback presentation compiler.
+2026.04.22 01:45:14 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/idempotency/IdempotencyKey.java. Using fallback presentation compiler.
+2026.04.22 01:45:14 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/idempotency/IdempotencyRecord.java. Using fallback presentation compiler.
+2026.04.22 01:45:14 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/idempotency/IdempotencyRecordRepository.java. Using fallback presentation compiler.
+2026.04.22 01:45:14 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/idempotency/IdempotencyService.java. Using fallback presentation compiler.
+2026.04.22 01:45:14 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/outbox/OutboxEvent.java. Using fallback presentation compiler.
+2026.04.22 01:45:14 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/outbox/OutboxProcessor.java. Using fallback presentation compiler.
+2026.04.22 01:45:14 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/outbox/OutboxPublisher.java. Using fallback presentation compiler.
+2026.04.22 01:45:14 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/outbox/OutboxRepository.java. Using fallback presentation compiler.
+2026.04.22 01:45:14 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/outbox/OutboxStatus.java. Using fallback presentation compiler.
+2026.04.22 01:45:14 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/test/java/com/okemwag/elitebet/EliteBetApplicationTests.java. Using fallback presentation compiler.
+2026.04.22 01:45:14 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/test/java/com/okemwag/elitebet/integration/InfrastructureSmokeIT.java. Using fallback presentation compiler.
+2026.04.22 01:45:14 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/auditing/AuditEvent.java. Using fallback presentation compiler.
+2026.04.22 01:45:14 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/auditing/AuditEventRepository.java. Using fallback presentation compiler.
+2026.04.22 01:45:14 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/idempotency/IdempotencyStatus.java. Using fallback presentation compiler.
+2026.04.22 01:46:12 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/exception/ForbiddenOperationException.java. Using fallback presentation compiler.
+2026.04.22 01:46:12 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/idempotency/IdempotencyService.java. Using fallback presentation compiler.
+Apr 22, 2026 1:46:13 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 9
+2026.04.22 01:46:14 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/idempotency/IdempotencyService.java. Using fallback presentation compiler.
+2026.04.22 01:46:20 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/idempotency/IdempotencyService.java. Using fallback presentation compiler.
+2026.04.22 01:46:20 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/idempotency/IdempotencyRecord.java. Using fallback presentation compiler.
+2026.04.22 01:46:21 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/idempotency/IdempotencyRecord.java. Using fallback presentation compiler.
+2026.04.22 01:47:29 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/idempotency/IdempotencyRecord.java. Using fallback presentation compiler.
+2026.04.22 01:47:38 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/test/java/com/okemwag/elitebet/shared/idempotency/IdempotencyServiceTest.java. Using fallback presentation compiler.
+2026.04.22 01:47:38 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/test/java/com/okemwag/elitebet/shared/idempotency/IdempotencyServiceTest.java. Using fallback presentation compiler.
+2026.04.22 01:47:38 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/test/java/com/okemwag/elitebet/shared/idempotency/IdempotencyServiceTest.java. Using fallback presentation compiler.
+2026.04.22 01:47:40 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/test/java/com/okemwag/elitebet/shared/idempotency/IdempotencyServiceTest.java. Using fallback presentation compiler.
+2026.04.22 01:47:48 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/test/java/com/okemwag/elitebet/shared/idempotency/IdempotencyServiceTest.java. Using fallback presentation compiler.
+2026.04.22 01:47:48 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/outbox/OutboxEvent.java. Using fallback presentation compiler.
+2026.04.22 01:47:48 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/outbox/OutboxEvent.java. Using fallback presentation compiler.
+2026.04.22 01:47:50 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/outbox/OutboxEvent.java. Using fallback presentation compiler.
+2026.04.22 01:47:50 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/outbox/OutboxProcessor.java. Using fallback presentation compiler.
+2026.04.22 01:47:50 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/outbox/OutboxProcessor.java. Using fallback presentation compiler.
+2026.04.22 01:48:11 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/outbox/OutboxProcessor.java. Using fallback presentation compiler.
+2026.04.22 01:48:11 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/test/java/com/okemwag/elitebet/shared/outbox/OutboxProcessorTest.java. Using fallback presentation compiler.
+2026.04.22 01:48:11 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/test/java/com/okemwag/elitebet/shared/outbox/OutboxProcessorTest.java. Using fallback presentation compiler.
+2026.04.22 01:48:11 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/test/java/com/okemwag/elitebet/shared/outbox/OutboxProcessorTest.java. Using fallback presentation compiler.
+2026.04.22 01:48:13 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/test/java/com/okemwag/elitebet/shared/outbox/OutboxProcessorTest.java. Using fallback presentation compiler.
