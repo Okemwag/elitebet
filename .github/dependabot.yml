@@ -1,0 +1,38 @@
+version: 2
+
+updates:
+  - package-ecosystem: maven
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "04:00"
+      timezone: Africa/Nairobi
+    open-pull-requests-limit: 10
+    groups:
+      spring:
+        patterns:
+          - org.springframework*
+          - org.springdoc*
+      observability:
+        patterns:
+          - io.micrometer*
+          - io.opentelemetry*
+
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "04:15"
+      timezone: Africa/Nairobi
+    open-pull-requests-limit: 10
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "04:30"
+      timezone: Africa/Nairobi
+    open-pull-requests-limit: 10
