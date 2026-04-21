@@ -36,12 +36,12 @@ public class AccountStateAccessService {
 			if (account.lockedUntil() == null || account.lockedUntil().isAfter(clock.instant())) {
 				return AccountAccessDecision.rejected(AccountAccessRejection.ACCOUNT_LOCKED);
 			}
-			return AccountAccessDecision.allowed();
+			return AccountAccessDecision.permitted();
 		}
 		if (account.status() == AccountStatus.PENDING_ACTIVATION && !isPendingAllowedPath(path)) {
 			return AccountAccessDecision.rejected(AccountAccessRejection.ACCOUNT_PENDING_ACTIVATION);
 		}
-		return AccountAccessDecision.allowed();
+		return AccountAccessDecision.permitted();
 	}
 
 	private boolean isPendingAllowedPath(String path) {
@@ -50,7 +50,7 @@ public class AccountStateAccessService {
 	}
 
 	public record AccountAccessDecision(boolean allowed, AccountAccessRejection rejection) {
-		public static AccountAccessDecision allowed() {
+		public static AccountAccessDecision permitted() {
 			return new AccountAccessDecision(true, null);
 		}
 

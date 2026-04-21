@@ -37,7 +37,7 @@ public class SessionController {
 	}
 
 	@PutMapping("/{principalId}/lock")
-	@PreAuthorize("hasAnyRole('ADMIN','SUPPORT','COMPLIANCE_OFFICER')")
+	@PreAuthorize("@authorizationService.hasPermission(authentication, T(com.okemwag.elitebet.shared.security.PermissionConstants).AUTH_ACCOUNT_LOCK)")
 	public ApiResponse<AuthAccountView> lock(@PathVariable String principalId,
 			@Valid @RequestBody AccountLockRequest request,
 			HttpServletRequest httpRequest) {
@@ -47,7 +47,7 @@ public class SessionController {
 	}
 
 	@PutMapping("/{principalId}/unlock")
-	@PreAuthorize("hasAnyRole('ADMIN','SUPPORT','COMPLIANCE_OFFICER')")
+	@PreAuthorize("@authorizationService.hasPermission(authentication, T(com.okemwag.elitebet.shared.security.PermissionConstants).AUTH_ACCOUNT_UNLOCK)")
 	public ApiResponse<AuthAccountView> unlock(@PathVariable String principalId,
 			@Valid @RequestBody AdminReasonRequest request,
 			HttpServletRequest httpRequest) {
@@ -57,7 +57,7 @@ public class SessionController {
 	}
 
 	@PostMapping("/{principalId}/disable")
-	@PreAuthorize("hasAnyRole('ADMIN','COMPLIANCE_OFFICER')")
+	@PreAuthorize("@authorizationService.hasPermission(authentication, T(com.okemwag.elitebet.shared.security.PermissionConstants).AUTH_ACCOUNT_DISABLE)")
 	public ResponseEntity<ApiResponse<AuthAccountView>> disable(@PathVariable String principalId,
 			@Valid @RequestBody AdminReasonRequest request,
 			HttpServletRequest httpRequest) {
