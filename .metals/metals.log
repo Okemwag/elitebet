@@ -1647,3 +1647,106 @@ WARNING: Unmatched cancel notification for request id 1518
 2026.04.22 03:31:46 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/test/java/com/okemwag/elitebet/authentication/api/AuthenticationSecurityTest.java. Using fallback presentation compiler.
 2026.04.22 03:37:06 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/test/java/com/okemwag/elitebet/user/application/UserProfileServiceTest.java. Using fallback presentation compiler.
 2026.04.22 03:37:09 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/test/java/com/okemwag/elitebet/user/application/UserProfileServiceTest.java. Using fallback presentation compiler.
+2026.04.22 03:37:44 INFO  Shutting down server
+2026.04.22 03:37:44 INFO  Memory monitor stopped
+2026.04.22 03:37:44 INFO  shutting down Metals
+2026.04.22 03:37:44 INFO  Exiting server
+2026.04.22 15:33:32 INFO  Started: Metals version 1.6.7 in folders '/home/okemwag/Downloads/elitebet' for client Visual Studio Code 1.116.0.
+2026.04.22 15:33:32 INFO  Memory monitor started
+2026.04.22 15:33:33 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.04.22 15:33:53 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/model/WalletBalance.java. Using fallback presentation compiler.
+2026.04.22 15:33:54 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/model/WalletBalance.java. Using fallback presentation compiler.
+2026.04.22 15:33:53 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/model/WalletBalance.java. Using fallback presentation compiler.
+Apr 22, 2026 3:33:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+Apr 22, 2026 3:33:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4
+2026.04.22 15:34:02 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/model/WalletBalance.java. Using fallback presentation compiler.
+2026.04.22 15:34:02 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/model/Wallet.java. Using fallback presentation compiler.
+2026.04.22 15:34:02 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/model/Wallet.java. Using fallback presentation compiler.
+2026.04.22 15:34:02 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/model/Wallet.java. Using fallback presentation compiler.
+2026.04.22 15:34:04 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/model/Wallet.java. Using fallback presentation compiler.
+2026.04.22 15:34:04 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/model/LedgerEntry.java. Using fallback presentation compiler.
+2026.04.22 15:34:04 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/model/LedgerEntry.java. Using fallback presentation compiler.
+2026.04.22 15:34:04 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/model/LedgerEntry.java. Using fallback presentation compiler.
+2026.04.22 15:34:07 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/model/LedgerEntry.java. Using fallback presentation compiler.
+2026.04.22 15:34:07 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/CurrencyCode.java. Using fallback presentation compiler.
+2026.04.22 15:34:07 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/CurrencyCode.java. Using fallback presentation compiler.
+2026.04.22 15:34:07 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/CurrencyCode.java. Using fallback presentation compiler.
+2026.04.22 15:34:13 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/CurrencyCode.java. Using fallback presentation compiler.
+2026.04.22 15:34:13 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/Money.java. Using fallback presentation compiler.
+2026.04.22 15:34:13 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/Money.java. Using fallback presentation compiler.
+2026.04.22 15:34:13 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/Money.java. Using fallback presentation compiler.
+2026.04.22 15:34:16 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/Money.java. Using fallback presentation compiler.
+2026.04.22 15:34:18 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/Money.java. Using fallback presentation compiler.
+Apr 22, 2026 3:51:29 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2026.04.22 15:51:32 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/Money.java. Using fallback presentation compiler.
+2026.04.22 15:51:32 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/model/WalletBalance.java. Using fallback presentation compiler.
+2026.04.22 15:51:32 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/model/WalletBalance.java. Using fallback presentation compiler.
+2026.04.22 15:51:32 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/model/WalletBalance.java. Using fallback presentation compiler.
+2026.04.22 15:51:32 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/model/WalletBalance.java. Using fallback presentation compiler.
+2026.04.22 15:51:35 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/model/WalletBalance.java. Using fallback presentation compiler.
+2026.04.22 15:51:35 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/CurrencyCode.java. Using fallback presentation compiler.
+2026.04.22 15:51:35 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/CurrencyCode.java. Using fallback presentation compiler.
+2026.04.22 15:51:35 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/CurrencyCode.java. Using fallback presentation compiler.
+2026.04.22 15:51:38 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/CurrencyCode.java. Using fallback presentation compiler.
+2026.04.22 15:51:38 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/Money.java. Using fallback presentation compiler.
+2026.04.22 15:51:38 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/Money.java. Using fallback presentation compiler.
+2026.04.22 15:51:38 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/Money.java. Using fallback presentation compiler.
+2026.04.22 15:53:43 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/Money.java. Using fallback presentation compiler.
+2026.04.22 15:53:43 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/infrastructure/persistence/entity/FundReservationEntity.java. Using fallback presentation compiler.
+2026.04.22 15:53:43 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/infrastructure/persistence/entity/FundReservationEntity.java. Using fallback presentation compiler.
+Apr 22, 2026 3:53:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 94
+2026.04.22 15:53:43 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/infrastructure/persistence/entity/FundReservationEntity.java. Using fallback presentation compiler.
+2026.04.22 15:53:43 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/infrastructure/persistence/entity/FundReservationEntity.java. Using fallback presentation compiler.
+2026.04.22 15:53:49 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/infrastructure/persistence/entity/FundReservationEntity.java. Using fallback presentation compiler.
+2026.04.22 15:53:49 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/infrastructure/persistence/entity/LedgerEntryEntity.java. Using fallback presentation compiler.
+2026.04.22 15:53:49 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/infrastructure/persistence/entity/LedgerEntryEntity.java. Using fallback presentation compiler.
+2026.04.22 15:53:49 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/infrastructure/persistence/entity/LedgerEntryEntity.java. Using fallback presentation compiler.
+2026.04.22 15:53:50 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/infrastructure/persistence/entity/LedgerEntryEntity.java. Using fallback presentation compiler.
+2026.04.22 15:53:55 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/infrastructure/persistence/entity/LedgerEntryEntity.java. Using fallback presentation compiler.
+2026.04.22 15:53:55 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/infrastructure/persistence/entity/WalletTransactionEntity.java. Using fallback presentation compiler.
+2026.04.22 15:53:55 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/infrastructure/persistence/entity/WalletTransactionEntity.java. Using fallback presentation compiler.
+2026.04.22 15:53:55 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/infrastructure/persistence/entity/WalletTransactionEntity.java. Using fallback presentation compiler.
+2026.04.22 15:53:55 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/infrastructure/persistence/entity/WalletTransactionEntity.java. Using fallback presentation compiler.
+2026.04.22 15:53:56 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/infrastructure/persistence/entity/WalletTransactionEntity.java. Using fallback presentation compiler.
+2026.04.22 15:53:56 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/Money.java. Using fallback presentation compiler.
+2026.04.22 15:53:57 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/Money.java. Using fallback presentation compiler.
+2026.04.22 15:53:56 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/Money.java. Using fallback presentation compiler.
+Apr 22, 2026 6:32:01 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2026.04.22 18:32:01 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/Money.java. Using fallback presentation compiler.
+2026.04.22 21:10:32 INFO  Started: Metals version 1.6.7 in folders '/home/okemwag/Downloads/elitebet' for client Visual Studio Code 1.116.0.
+2026.04.22 21:10:32 INFO  Memory monitor started
+2026.04.22 21:10:35 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.04.22 21:10:35 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/Money.java. Using fallback presentation compiler.
+2026.04.22 21:10:37 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/Money.java. Using fallback presentation compiler.
+2026.04.22 21:10:55 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/Money.java. Using fallback presentation compiler.
+2026.04.22 21:10:55 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/Money.java. Using fallback presentation compiler.
+2026.04.22 21:10:59 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/Money.java. Using fallback presentation compiler.
+Apr 22, 2026 9:11:00 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2026.04.22 21:10:59 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/Money.java. Using fallback presentation compiler.
+Apr 22, 2026 9:11:01 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2026.04.22 21:11:01 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/Money.java. Using fallback presentation compiler.
+Apr 22, 2026 9:11:01 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Apr 22, 2026 9:11:02 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2026.04.22 21:11:01 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/Money.java. Using fallback presentation compiler.
+2026.04.22 21:11:02 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/Money.java. Using fallback presentation compiler.
+2026.04.22 21:11:04 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/Money.java. Using fallback presentation compiler.
+2026.04.22 21:11:05 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/domain/valueobject/Money.java. Using fallback presentation compiler.
+2026.04.22 21:11:59 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/application/DefaultWalletService.java. Using fallback presentation compiler.
+2026.04.22 21:11:59 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/application/DefaultWalletService.java. Using fallback presentation compiler.
+2026.04.22 21:11:59 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/application/DefaultWalletService.java. Using fallback presentation compiler.
+Apr 22, 2026 9:12:00 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 24
+2026.04.22 21:12:01 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/application/DefaultWalletService.java. Using fallback presentation compiler.
+2026.04.22 21:12:01 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/api/request/ReserveFundsRequest.java. Using fallback presentation compiler.
+2026.04.22 21:12:01 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/api/request/ReserveFundsRequest.java. Using fallback presentation compiler.
+2026.04.22 21:12:01 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/api/request/ReserveFundsRequest.java. Using fallback presentation compiler.
+2026.04.22 21:12:01 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/wallet/api/request/ReserveFundsRequest.java. Using fallback presentation compiler.
