@@ -30,6 +30,12 @@ public class AuthAuditService {
 				Map.of("email", email));
 	}
 
+	public void registrationThrottled(String limitType, java.time.Duration retryAfter, HttpServletRequest request) {
+		publish(AuditAction.THROTTLE, "registration", actorContext("anonymous", AuditActorType.USER, request),
+				Map.of("operation", "register", "limitType", limitType, "retryAfterSeconds",
+						String.valueOf(Math.max(1, retryAfter.toSeconds()))));
+	}
+
 	public void accountLocked(String principalId, String reason, HttpServletRequest request) {
 		publish(AuditAction.LOCK, principalId, actorContext(SecurityUtils.currentPrincipalIdOrAnonymous(),
 				AuditActorType.ADMIN, request), Map.of("reason", reason));

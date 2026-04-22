@@ -41,6 +41,11 @@ logging:
     level: "%5p [correlationId:%X{correlationId:-} userId:%X{userId:-}]"
 
 elitebet:
+  auth:
+    rate-limit:
+      registration-ip-max-attempts: ${AUTH_REGISTRATION_IP_MAX_ATTEMPTS:20}
+      registration-identity-max-attempts: ${AUTH_REGISTRATION_IDENTITY_MAX_ATTEMPTS:5}
+      registration-window: ${AUTH_REGISTRATION_WINDOW:1h}
   keycloak:
     base-url: ${KEYCLOAK_BASE_URL:http://localhost:9090}
     realm: ${KEYCLOAK_REALM:elitebet}

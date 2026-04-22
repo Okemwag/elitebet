@@ -10,5 +10,6 @@ public enum AuditAction {
 	LOGIN,
 	LOGOUT,
 	LOCK,
-	UNLOCK
+	UNLOCK,
+	THROTTLE
 }

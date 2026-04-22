@@ -34,13 +34,18 @@ public class AuthenticationController {
 
 	private final RegistrationService registrationService;
 
+	private final AuthenticationRateLimitService rateLimitService;
+
 	private final SessionService sessionService;
 
 	private final AuthAuditService authAuditService;
 
-	public AuthenticationController(RegistrationService registrationService, SessionService sessionService,
+	public AuthenticationController(RegistrationService registrationService,
+			AuthenticationRateLimitService rateLimitService,
+			SessionService sessionService,
 			AuthAuditService authAuditService) {
 		this.registrationService = registrationService;
+		this.rateLimitService = rateLimitService;
 		this.sessionService = sessionService;
 		this.authAuditService = authAuditService;
 	}
@@ -50,6 +55,7 @@ public class AuthenticationController {
 			@RequestHeader("Idempotency-Key") String idempotencyKey,
 			@Valid @RequestBody RegisterAccountRequest request,
 			HttpServletRequest httpRequest) {
+		rateLimitService.enforceRegistration(request, httpRequest);
 		AuthAccountView account = registrationService.register(request, new IdempotencyKey(idempotencyKey));
 		authAuditService.registrationCreated(account.principalId(), account.email(), httpRequest);
 		return ResponseEntity.status(HttpStatus.CREATED)

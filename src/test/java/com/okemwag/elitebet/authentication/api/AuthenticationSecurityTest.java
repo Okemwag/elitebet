@@ -2,6 +2,7 @@ package com.okemwag.elitebet.authentication.api;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.when;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.jwt;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -10,6 +11,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import java.time.Duration;
 import java.time.Instant;
 import java.util.Optional;
 import java.util.Set;
@@ -27,6 +29,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.okemwag.elitebet.authentication.api.request.AdminReasonRequest;
 import com.okemwag.elitebet.authentication.api.request.RegisterAccountRequest;
 import com.okemwag.elitebet.authentication.application.AccountAccessService;
+import com.okemwag.elitebet.authentication.application.AuthenticationRateLimitService;
 import com.okemwag.elitebet.authentication.application.SessionService;
 import com.okemwag.elitebet.authentication.application.RegistrationService;
 import com.okemwag.elitebet.authentication.application.dto.AuthAccountView;
@@ -35,6 +38,7 @@ import com.okemwag.elitebet.authentication.domain.enums.AuthProvider;
 import com.okemwag.elitebet.authentication.domain.enums.MfaStatus;
 import com.okemwag.elitebet.authentication.domain.model.AuthAccount;
 import com.okemwag.elitebet.authentication.domain.repository.AuthAccountRepository;
+import com.okemwag.elitebet.shared.exception.RateLimitExceededException;
 import com.okemwag.elitebet.shared.security.RoleConstants;
 
 @SpringBootTest(properties = {
@@ -55,6 +59,9 @@ class AuthenticationSecurityTest {
 
 	@MockitoBean
 	private RegistrationService registrationService;
+
+	@MockitoBean
+	private AuthenticationRateLimitService authenticationRateLimitService;
 
 	@MockitoBean
 	private AccountAccessService accountAccessService;
@@ -122,6 +129,23 @@ class AuthenticationSecurityTest {
 			.contentType(MediaType.APPLICATION_JSON)
 			.content(objectMapper.writeValueAsString(request)))
 			.andExpect(status().isBadRequest());
+	}
+
+	@Test
+	void registerReturnsTooManyRequestsWhenRateLimited() throws Exception {
+		RegisterAccountRequest request = new RegisterAccountRequest("bettor1", "bettor@example.com",
+				"correct-horse-password", true, false);
+		doThrow(new RateLimitExceededException("Too many registration attempts", Duration.ofMinutes(10)))
+			.when(authenticationRateLimitService)
+			.enforceRegistration(any(RegisterAccountRequest.class), any());
+
+		mockMvc.perform(post("/api/v1/auth/register")
+			.header("Idempotency-Key", "registration-key-1")
+			.contentType(MediaType.APPLICATION_JSON)
+			.content(objectMapper.writeValueAsString(request)))
+			.andExpect(status().isTooManyRequests())
+			.andExpect(jsonPath("$.code").value("RATE_LIMIT_EXCEEDED"))
+			.andExpect(jsonPath("$.message").value("Too many registration attempts"));
 	}
 
 	@Test

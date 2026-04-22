@@ -1508,3 +1508,54 @@ WARNING: Unmatched cancel notification for request id 148
 2026.04.22 02:56:57 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/test/java/com/okemwag/elitebet/shared/security/JwtAuthenticationConverterTest.java. Using fallback presentation compiler.
 2026.04.22 02:56:58 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/test/java/com/okemwag/elitebet/shared/security/JwtAuthenticationConverterTest.java. Using fallback presentation compiler.
 2026.04.22 02:58:09 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/test/java/com/okemwag/elitebet/shared/security/JwtAuthenticationConverterTest.java. Using fallback presentation compiler.
+2026.04.22 03:01:07 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/authentication/api/SessionController.java. Using fallback presentation compiler.
+2026.04.22 03:01:07 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/authentication/application/AccountStateAccessService.java. Using fallback presentation compiler.
+2026.04.22 03:01:07 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/security/PermissionConstants.java. Using fallback presentation compiler.
+2026.04.22 03:01:07 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/security/SecurityConfig.java. Using fallback presentation compiler.
+2026.04.22 03:01:07 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/authentication/infrastructure/security/AccountStateEnforcementFilter.java. Using fallback presentation compiler.
+2026.04.22 03:01:07 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/security/AuthorizationService.java. Using fallback presentation compiler.
+2026.04.22 03:01:07 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/security/PostAuthenticationFilter.java. Using fallback presentation compiler.
+2026.04.22 03:01:07 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/security/RolePermissionPolicy.java. Using fallback presentation compiler.
+2026.04.22 03:01:07 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/test/java/com/okemwag/elitebet/shared/security/AuthorizationServiceTest.java. Using fallback presentation compiler.
+2026.04.22 03:02:35 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/test/java/com/okemwag/elitebet/shared/security/JwtAuthenticationConverterTest.java. Using fallback presentation compiler.
+2026.04.22 03:02:36 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/test/java/com/okemwag/elitebet/shared/security/JwtAuthenticationConverterTest.java. Using fallback presentation compiler.
+2026.04.22 03:02:36 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/ratelimit/RateLimiter.java. Using fallback presentation compiler.
+2026.04.22 03:02:36 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/ratelimit/RateLimiter.java. Using fallback presentation compiler.
+2026.04.22 03:02:36 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/ratelimit/RateLimiter.java. Using fallback presentation compiler.
+2026.04.22 03:02:39 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/ratelimit/RateLimiter.java. Using fallback presentation compiler.
+2026.04.22 03:02:39 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/ratelimit/RateLimitKeyHasher.java. Using fallback presentation compiler.
+2026.04.22 03:02:40 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/ratelimit/RateLimitKeyHasher.java. Using fallback presentation compiler.
+2026.04.22 03:02:39 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/ratelimit/RateLimitKeyHasher.java. Using fallback presentation compiler.
+2026.04.22 03:02:41 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/ratelimit/RateLimitKeyHasher.java. Using fallback presentation compiler.
+2026.04.22 03:03:20 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/ratelimit/RateLimitKeyHasher.java. Using fallback presentation compiler.
+2026.04.22 03:03:20 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/ratelimit/RateLimitOutcome.java. Using fallback presentation compiler.
+2026.04.22 03:03:20 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/ratelimit/RateLimitOutcome.java. Using fallback presentation compiler.
+2026.04.22 03:03:20 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/ratelimit/RateLimitOutcome.java. Using fallback presentation compiler.
+2026.04.22 03:03:23 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/ratelimit/RateLimitOutcome.java. Using fallback presentation compiler.
+2026.04.22 03:03:23 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/ratelimit/RateLimitRule.java. Using fallback presentation compiler.
+2026.04.22 03:03:23 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/ratelimit/RateLimitRule.java. Using fallback presentation compiler.
+2026.04.22 03:03:23 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/ratelimit/RateLimitRule.java. Using fallback presentation compiler.
+2026.04.22 03:03:32 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/ratelimit/RateLimitRule.java. Using fallback presentation compiler.
+2026.04.22 03:03:32 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/ratelimit/RedisRateLimiter.java. Using fallback presentation compiler.
+2026.04.22 03:03:32 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/ratelimit/RedisRateLimiter.java. Using fallback presentation compiler.
+2026.04.22 03:03:32 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/ratelimit/RedisRateLimiter.java. Using fallback presentation compiler.
+2026.04.22 03:04:34 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/ratelimit/RedisRateLimiter.java. Using fallback presentation compiler.
+2026.04.22 03:05:00 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/ratelimit/RedisRateLimiter.java. Using fallback presentation compiler.
+2026.04.22 03:05:00 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/exception/GlobalExceptionHandler.java. Using fallback presentation compiler.
+2026.04.22 03:05:01 WARN  no build target for: /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/exception/GlobalExceptionHandler.java
+2026.04.22 03:05:01 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/exception/GlobalExceptionHandler.java. Using fallback presentation compiler.
+2026.04.22 03:05:04 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/auditing/AuditAction.java. Using fallback presentation compiler.
+2026.04.22 03:05:04 WARN  no build target for: /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/auditing/AuditAction.java
+2026.04.22 03:05:05 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/auditing/AuditAction.java. Using fallback presentation compiler.
+2026.04.22 03:05:07 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/exception/RateLimitExceededException.java. Using fallback presentation compiler.
+2026.04.22 03:05:07 WARN  no build target for: /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/exception/RateLimitExceededException.java
+2026.04.22 03:05:07 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/exception/RateLimitExceededException.java. Using fallback presentation compiler.
+2026.04.22 03:05:07 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/exception/RateLimitExceededException.java. Using fallback presentation compiler.
+2026.04.22 03:05:11 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/ratelimit/RateLimiter.java. Using fallback presentation compiler.
+2026.04.22 03:05:11 WARN  no build target for: /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/ratelimit/RateLimiter.java
+2026.04.22 03:05:11 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/ratelimit/RateLimiter.java. Using fallback presentation compiler.
+2026.04.22 03:05:12 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/shared/ratelimit/RateLimiter.java. Using fallback presentation compiler.
+2026.04.22 03:05:17 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/authentication/api/AuthenticationController.java. Using fallback presentation compiler.
+2026.04.22 03:05:17 WARN  no build target for: /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/authentication/api/AuthenticationController.java
+2026.04.22 03:05:17 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/main/java/com/okemwag/elitebet/authentication/api/AuthenticationController.java. Using fallback presentation compiler.
+2026.04.22 03:05:31 INFO  no build target found for /home/okemwag/Downloads/elitebet/src/test/java/com/okemwag/elitebet/authentication/api/AuthenticationSecurityTest.java. Using fallback presentation compiler.

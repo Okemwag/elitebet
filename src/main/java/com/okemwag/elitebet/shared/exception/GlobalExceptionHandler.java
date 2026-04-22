@@ -82,6 +82,14 @@ public class GlobalExceptionHandler {
 		return businessError(HttpStatus.FORBIDDEN, exception, request);
 	}
 
+	@ExceptionHandler(RateLimitExceededException.class)
+	ResponseEntity<ApiError> handleRateLimitExceeded(RateLimitExceededException exception, HttpServletRequest request) {
+		return ResponseEntity.status(HttpStatus.TOO_MANY_REQUESTS)
+			.header("Retry-After", String.valueOf(Math.max(1, exception.retryAfter().toSeconds())))
+			.body(ApiError.of(ErrorCode.RATE_LIMIT_EXCEEDED, exception.getMessage(),
+					HttpStatus.TOO_MANY_REQUESTS.value(), request.getRequestURI(), correlationId()));
+	}
+
 	@ExceptionHandler(ExternalIntegrationException.class)
 	ResponseEntity<ApiError> handleExternalIntegration(ExternalIntegrationException exception, HttpServletRequest request) {
 		return businessError(HttpStatus.BAD_GATEWAY, exception, request);
