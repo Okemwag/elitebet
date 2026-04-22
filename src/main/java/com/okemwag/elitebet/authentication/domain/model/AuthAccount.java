@@ -33,6 +33,9 @@ public class AuthAccount {
 	@Column(name = "principal_id", nullable = false, length = 160)
 	private String principalId;
 
+	@Column(name = "account_number", nullable = false, length = 20)
+	private String accountNumber;
+
 	@Column(nullable = false, length = 160)
 	private String username;
 
@@ -78,9 +81,10 @@ public class AuthAccount {
 	protected AuthAccount() {
 	}
 
-	private AuthAccount(String principalId, String username, String email, AuthProvider provider, String providerUserId,
-			boolean emailVerified, Instant now) {
+	private AuthAccount(String principalId, String accountNumber, String username, String email, AuthProvider provider,
+			String providerUserId, boolean emailVerified, Instant now) {
 		this.principalId = principalId;
+		this.accountNumber = accountNumber;
 		this.username = username;
 		this.email = email.toLowerCase();
 		this.provider = provider;
@@ -92,9 +96,9 @@ public class AuthAccount {
 		this.updatedAt = now;
 	}
 
-	public static AuthAccount create(String principalId, String username, String email, AuthProvider provider,
-			String providerUserId, boolean emailVerified, Instant now) {
-		return new AuthAccount(principalId, username, email, provider, providerUserId, emailVerified, now);
+	public static AuthAccount create(String principalId, String accountNumber, String username, String email,
+			AuthProvider provider, String providerUserId, boolean emailVerified, Instant now) {
+		return new AuthAccount(principalId, accountNumber, username, email, provider, providerUserId, emailVerified, now);
 	}
 
 	public void recordLogin(Instant now) {
@@ -128,6 +132,10 @@ public class AuthAccount {
 
 	public String principalId() {
 		return principalId;
+	}
+
+	public String accountNumber() {
+		return accountNumber;
 	}
 
 	public String username() {

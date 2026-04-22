@@ -30,7 +30,6 @@ class RedisRateLimiterTest {
 		RedisRateLimiter rateLimiter = rateLimiter();
 		RateLimitRule rule = new RateLimitRule("auth:registration:ip", 2, Duration.ofMinutes(5));
 		when(valueOperations.increment(any())).thenReturn(1L);
-		when(redisTemplate.getExpire(any(), eq(TimeUnit.SECONDS))).thenReturn(-1L);
 
 		RateLimitOutcome outcome = rateLimiter.consume(rule, "127.0.0.1");
 

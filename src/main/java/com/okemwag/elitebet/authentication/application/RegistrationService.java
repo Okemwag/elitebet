@@ -44,16 +44,19 @@ public class RegistrationService {
 
 	private final ObjectProvider<IdempotencyService> idempotencyService;
 
+	private final ObjectProvider<AccountNumberGenerator> accountNumberGenerator;
+
 	private final ObjectMapper objectMapper;
 
 	public RegistrationService(AuthAccountRepository repository, ObjectProvider<KeycloakAdminClient> keycloakAdminClient,
 			AuthenticationMapper mapper, Clock clock, ObjectProvider<IdempotencyService> idempotencyService,
-			ObjectMapper objectMapper) {
+			ObjectProvider<AccountNumberGenerator> accountNumberGenerator, ObjectMapper objectMapper) {
 		this.repository = repository;
 		this.keycloakAdminClient = keycloakAdminClient;
 		this.mapper = mapper;
 		this.clock = clock;
 		this.idempotencyService = idempotencyService;
+		this.accountNumberGenerator = accountNumberGenerator;
 		this.objectMapper = objectMapper;
 	}
 
@@ -96,9 +99,18 @@ public class RegistrationService {
 		String providerUserId = client.createUser(new KeycloakUserRegistration(request.username().trim(), normalizedEmail,
 				request.password(), false));
 		client.assignRealmRole(providerUserId, RoleConstants.BETTOR);
-		AuthAccount account = AuthAccount.create(providerUserId, request.username().trim(), normalizedEmail,
-				AuthProvider.KEYCLOAK, providerUserId, false, clock.instant());
+		String accountNumber = nextAccountNumber();
+		AuthAccount account = AuthAccount.create(providerUserId, accountNumber, request.username().trim(),
+				normalizedEmail, AuthProvider.KEYCLOAK, providerUserId, false, clock.instant());
 		return mapper.toView(repository.save(account), Set.of(RoleConstants.BETTOR));
+	}
+
+	private String nextAccountNumber() {
+		AccountNumberGenerator generator = accountNumberGenerator.getIfAvailable();
+		if (generator == null) {
+			throw new IllegalStateException("Account number generator is not configured");
+		}
+		return generator.nextAccountNumber();
 	}
 
 	private String requestHash(RegisterAccountRequest request) {

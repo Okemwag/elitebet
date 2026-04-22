@@ -67,13 +67,16 @@ class InfrastructureSmokeIT {
 						       exists(select 1 from information_schema.triggers
 						              where event_object_schema = 'elitebet'
 						                and event_object_table = 'audit_events'
-						                and trigger_name = 'trg_audit_events_append_only_delete')
+						                and trigger_name = 'trg_audit_events_append_only_delete'),
+						       exists(select 1 from information_schema.tables
+						              where table_schema = 'elitebet' and table_name = 'user_profiles')
 						""")) {
 			assertThat(resultSet.next()).isTrue();
 			assertThat(resultSet.getBoolean(1)).isTrue();
 			assertThat(resultSet.getBoolean(2)).isTrue();
 			assertThat(resultSet.getBoolean(3)).isTrue();
 			assertThat(resultSet.getBoolean(4)).isTrue();
+			assertThat(resultSet.getBoolean(5)).isTrue();
 		}
 
 		try (var redisConnection = redisConnectionFactory.getConnection()) {

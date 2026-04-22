@@ -11,7 +11,8 @@ import com.okemwag.elitebet.authentication.domain.model.AuthAccount;
 public class AuthenticationMapper {
 
 	public AuthAccountView toView(AuthAccount account, Set<String> roles) {
-		return new AuthAccountView(account.principalId(), account.username(), account.email(), account.emailVerified(),
-				account.status(), account.mfaStatus(), Set.copyOf(roles), account.lockedUntil(), account.lastLoginAt());
+		return new AuthAccountView(account.principalId(), account.accountNumber(), account.username(), account.email(),
+				account.emailVerified(), account.status(), account.mfaStatus(), Set.copyOf(roles), account.lockedUntil(),
+				account.lastLoginAt());
 	}
 }

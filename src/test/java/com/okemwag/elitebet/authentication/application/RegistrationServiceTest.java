@@ -39,13 +39,16 @@ class RegistrationServiceTest {
 
 	private final IdempotencyRecordRepository idempotencyRecordRepository = mock(IdempotencyRecordRepository.class);
 
+	private final AccountNumberGenerator accountNumberGenerator = mock(AccountNumberGenerator.class);
+
 	private final ObjectMapper objectMapper = new ObjectMapper().findAndRegisterModules();
 
 	private final IdempotencyService idempotencyService = new IdempotencyService(idempotencyRecordRepository,
 			Clock.fixed(NOW, ZoneOffset.UTC));
 
 	private final RegistrationService service = new RegistrationService(accountRepository, provider(keycloakAdminClient),
-			new AuthenticationMapper(), Clock.fixed(NOW, ZoneOffset.UTC), provider(idempotencyService), objectMapper);
+			new AuthenticationMapper(), Clock.fixed(NOW, ZoneOffset.UTC), provider(idempotencyService),
+			provider(accountNumberGenerator), objectMapper);
 
 	@Test
 	void createsAccountAndCompletesIdempotencyRecord() {
@@ -54,11 +57,13 @@ class RegistrationServiceTest {
 		when(idempotencyRecordRepository.save(any(IdempotencyRecord.class))).thenAnswer(invocation -> invocation.getArgument(0));
 		when(accountRepository.existsByEmail("bettor@example.com")).thenReturn(false);
 		when(keycloakAdminClient.createUser(any(KeycloakUserRegistration.class))).thenReturn("keycloak-user-1");
+		when(accountNumberGenerator.nextAccountNumber()).thenReturn("EB100000000000");
 		when(accountRepository.save(any(AuthAccount.class))).thenAnswer(invocation -> invocation.getArgument(0));
 
 		var account = service.register(request(), new IdempotencyKey("registration-key-1"));
 
 		assertThat(account.principalId()).isEqualTo("keycloak-user-1");
+		assertThat(account.accountNumber()).isEqualTo("EB100000000000");
 		verify(keycloakAdminClient).assignRealmRole("keycloak-user-1", "BETTOR");
 	}
 
@@ -68,7 +73,7 @@ class RegistrationServiceTest {
 				new IdempotencyKey("registration-key-1"), "bettor@example.com", requestHash(),
 				NOW.plusSeconds(600), NOW);
 		record.complete(201, """
-				{"principalId":"keycloak-user-1","username":"bettor1","email":"bettor@example.com","emailVerified":false,"status":"PENDING_ACTIVATION","mfaStatus":"NOT_CONFIGURED","roles":["BETTOR"],"lockedUntil":null,"lastLoginAt":null}
+				{"principalId":"keycloak-user-1","accountNumber":"EB100000000000","username":"bettor1","email":"bettor@example.com","emailVerified":false,"status":"PENDING_ACTIVATION","mfaStatus":"NOT_CONFIGURED","roles":["BETTOR"],"lockedUntil":null,"lastLoginAt":null}
 				""", NOW);
 		when(idempotencyRecordRepository.findByOperationTypeAndIdempotencyKeyAndActorId(
 				any(IdempotentOperationType.class), any(), any())).thenReturn(Optional.of(record));
@@ -76,6 +81,7 @@ class RegistrationServiceTest {
 		var account = service.register(request(), new IdempotencyKey("registration-key-1"));
 
 		assertThat(account.principalId()).isEqualTo("keycloak-user-1");
+		assertThat(account.accountNumber()).isEqualTo("EB100000000000");
 		verify(keycloakAdminClient, never()).createUser(any());
 	}
 

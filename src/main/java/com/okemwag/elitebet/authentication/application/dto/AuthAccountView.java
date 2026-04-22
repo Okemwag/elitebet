@@ -8,6 +8,7 @@ import com.okemwag.elitebet.authentication.domain.enums.MfaStatus;
 
 public record AuthAccountView(
 		String principalId,
+		String accountNumber,
 		String username,
 		String email,
 		boolean emailVerified,

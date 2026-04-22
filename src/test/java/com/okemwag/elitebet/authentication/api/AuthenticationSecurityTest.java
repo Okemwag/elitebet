@@ -40,6 +40,7 @@ import com.okemwag.elitebet.authentication.domain.model.AuthAccount;
 import com.okemwag.elitebet.authentication.domain.repository.AuthAccountRepository;
 import com.okemwag.elitebet.shared.exception.RateLimitExceededException;
 import com.okemwag.elitebet.shared.security.RoleConstants;
+import com.okemwag.elitebet.user.domain.repository.UserProfileRepository;
 
 @SpringBootTest(properties = {
 		"spring.autoconfigure.exclude=org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration,org.springframework.boot.hibernate.autoconfigure.HibernateJpaAutoConfiguration,org.springframework.boot.flyway.autoconfigure.FlywayAutoConfiguration",
@@ -56,6 +57,9 @@ class AuthenticationSecurityTest {
 
 	@MockitoBean
 	private AuthAccountRepository authAccountRepository;
+
+	@MockitoBean
+	private UserProfileRepository userProfileRepository;
 
 	@MockitoBean
 	private RegistrationService registrationService;
@@ -108,7 +112,7 @@ class AuthenticationSecurityTest {
 		RegisterAccountRequest request = new RegisterAccountRequest("bettor1", "bettor@example.com",
 				"correct-horse-password", true, false);
 		when(registrationService.register(any(RegisterAccountRequest.class), any()))
-			.thenReturn(new AuthAccountView("user-1", "bettor1", "bettor@example.com", false,
+			.thenReturn(new AuthAccountView("user-1", "EB100000000000", "bettor1", "bettor@example.com", false,
 					AccountStatus.PENDING_ACTIVATION, MfaStatus.NOT_CONFIGURED, Set.of(RoleConstants.BETTOR), null, null));
 
 		mockMvc.perform(post("/api/v1/auth/register")
@@ -117,6 +121,7 @@ class AuthenticationSecurityTest {
 			.content(objectMapper.writeValueAsString(request)))
 			.andExpect(status().isCreated())
 			.andExpect(jsonPath("$.data.principalId").value("user-1"))
+			.andExpect(jsonPath("$.data.accountNumber").value("EB100000000000"))
 			.andExpect(jsonPath("$.data.status").value(AccountStatus.PENDING_ACTIVATION.name()));
 	}
 
@@ -180,10 +185,10 @@ class AuthenticationSecurityTest {
 	@Test
 	void supportCanLockAndUnlockButCannotDisableAccounts() throws Exception {
 		when(authAccountRepository.findByPrincipalId("support-1")).thenReturn(Optional.of(activeAccount("support-1")));
-		when(accountAccessService.lock(eq("user-1"), any())).thenReturn(new AuthAccountView("user-1", "bettor1",
+		when(accountAccessService.lock(eq("user-1"), any())).thenReturn(new AuthAccountView("user-1", "EB100000000000", "bettor1",
 				"bettor@example.com", true, AccountStatus.LOCKED, MfaStatus.NOT_CONFIGURED, Set.of(),
 				Instant.parse("2026-04-23T00:00:00Z"), null));
-		when(accountAccessService.unlock(eq("user-1"))).thenReturn(new AuthAccountView("user-1", "bettor1",
+		when(accountAccessService.unlock(eq("user-1"))).thenReturn(new AuthAccountView("user-1", "EB100000000000", "bettor1",
 				"bettor@example.com", true, AccountStatus.ACTIVE, MfaStatus.NOT_CONFIGURED, Set.of(), null, null));
 
 		mockMvc.perform(put("/api/v1/admin/auth/accounts/user-1/lock")
@@ -223,7 +228,7 @@ class AuthenticationSecurityTest {
 	@Test
 	void adminCanDisableAccount() throws Exception {
 		when(authAccountRepository.findByPrincipalId("admin-1")).thenReturn(Optional.of(activeAccount("admin-1")));
-		when(accountAccessService.disable(eq("user-1"))).thenReturn(new AuthAccountView("user-1", "bettor1",
+		when(accountAccessService.disable(eq("user-1"))).thenReturn(new AuthAccountView("user-1", "EB100000000000", "bettor1",
 				"bettor@example.com", true, AccountStatus.DISABLED, MfaStatus.NOT_CONFIGURED, Set.of(), null,
 				Instant.parse("2026-04-22T00:00:00Z")));
 
@@ -261,7 +266,7 @@ class AuthenticationSecurityTest {
 	}
 
 	private AuthAccount activeAccount(String principalId) {
-		return AuthAccount.create(principalId, principalId, principalId + "@example.com", AuthProvider.KEYCLOAK,
-				principalId, true, Instant.parse("2026-04-22T00:00:00Z"));
+		return AuthAccount.create(principalId, "EB100000000000", principalId, principalId + "@example.com",
+				AuthProvider.KEYCLOAK, principalId, true, Instant.parse("2026-04-22T00:00:00Z"));
 	}
 }

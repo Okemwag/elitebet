@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.okemwag.elitebet.authentication.api.request.LogoutRequest;
 import com.okemwag.elitebet.authentication.api.request.RegisterAccountRequest;
 import com.okemwag.elitebet.authentication.application.AuthAuditService;
+import com.okemwag.elitebet.authentication.application.AuthenticationRateLimitService;
 import com.okemwag.elitebet.authentication.application.RegistrationService;
 import com.okemwag.elitebet.authentication.application.SessionService;
 import com.okemwag.elitebet.authentication.application.dto.AuthAccountView;
@@ -65,7 +66,7 @@ public class AuthenticationController {
 	@GetMapping("/me")
 	public ApiResponse<AuthAccountView> me(Authentication authentication) {
 		Jwt jwt = (Jwt) authentication.getPrincipal();
-		return ApiResponse.ok(new AuthAccountView(jwt.getSubject(), jwt.getClaimAsString("preferred_username"),
+		return ApiResponse.ok(new AuthAccountView(jwt.getSubject(), null, jwt.getClaimAsString("preferred_username"),
 				jwt.getClaimAsString("email"), Boolean.TRUE.equals(jwt.getClaim("email_verified")), null, null,
 				SecurityUtils.currentUser(jwt, authentication.getAuthorities()).roles(), null, null),
 				MdcKeys.get(MdcKeys.CORRELATION_ID));
